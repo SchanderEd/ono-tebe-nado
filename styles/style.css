@@ -305,13 +305,13 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 182px 50px 88px;
+  padding: 180px 50px 88px;
 }
 
 .footer__contacts-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .footer__nav-list, .footer__social-list {
