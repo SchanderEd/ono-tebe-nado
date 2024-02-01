@@ -1,12 +1,29 @@
 :root {
   --dark-text: #000;
+  --link-hover: #9e9696;
   --light-text: #fff;
+  --overlay-bg: #000;
 }
 
 .link {
+  color: var(--dark-text);
   font-size: 18px;
   text-decoration-skip-ink: none;
   text-underline-position: under;
+  transition: color .3s ease-in;
+}
+
+.opacity-link {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.opacity-link:hover {
+  opacity: .8;
+}
+
+.link:hover {
+  color: var(--link-hover);
 }
 
 .link--active {
@@ -17,30 +34,29 @@
   color: var(--dark-text);
   font-weight: 700;
   font-size: 40px;
-  font-style: normal;
-  line-height: normal;
   text-transform: uppercase;
 }
 
 .contacts-list {
-  max-width: 238px;
-  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+  max-width: 238px;
+  font-style: normal;
+  list-style: none;
 }
 
 .header {
   display: flex;
   align-items: center;
-  gap: 46px;
-  padding: 97px 51px;
+  gap: 44px;
+  padding: 94px 51px;
 }
 
 .header__nav-list {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 33px;
   list-style: circle;
 }
 
@@ -53,18 +69,21 @@
   margin-left: auto;
 }
 
-.address {
+.nav-item__no-bullit {
+  list-style-type: none;
+}
+
+.contacts-list__address {
   color: var(--dark-text);
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
-  line-height: 24px;
 }
 
 .cover {
   padding: 0 50px;
-  padding-top: 157px;
-  padding-bottom: 52px;
+  padding-top: 163px;
+  padding-bottom: 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,7 +100,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background-color: var(--dark-text);
+  background-color: var(--overlay-bg);
 }
 
 .cover__content {
@@ -92,74 +111,57 @@
 .cover__title {
   color: var(--light-text);
   font-size: 100px;
-  letter-spacing: 45px;
+  letter-spacing: .45em;
   text-transform: uppercase;
 }
 
 .span-accent {
   display: block;
-  letter-spacing: 28px;
+  letter-spacing: 0.03em;
 }
 
-.last-letter {
-  padding-left: 32px;
+.letter-spacing-xl {
+  letter-spacing: .6em;
 }
 
 .text-center {
   padding-top: 10px;
-  padding-right: 67px;
-  letter-spacing: 6px;
+  letter-spacing: -.3em;
   text-align: center;
 }
 
-.text-center .first-letter {
-  padding-right: 0px;
-  padding-left: 0px;
-  letter-spacing: 0;
-}
-
-.text-center .center-letter {
-  letter-spacing: 30px;
-}
-
-.text-center .last-letter {
-  padding-left: 0;
-  letter-spacing: 0;
+.text-center__letter-spacing-sm {
+  letter-spacing: .31em;
 }
 
 .text-right {
-  padding-top: 2px;
-  letter-spacing: 0px;
+  padding-top: 3px;
+  letter-spacing: -.4em;
   text-align: right;
 }
 
-.text-right .first-letter {
-  letter-spacing: 40px;
+.text-right__letter-spacing-xl {
+  letter-spacing: .29em;
 }
 
-.text-right .center-letter {
-  letter-spacing: 15px;
-}
-
-.text-right .last-letter {
-  padding-left: 0;
+.letter-spacing-sm {
+  letter-spacing: .01em;
 }
 
 .cover__bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 130px;
+  padding-top: 128px;
   padding-left: 28px;
 }
 
 .cover__subtitle {
   color: var(--light-text);
-  font-weight: 400;
   font-size: 22px;
-  line-height: 28px;
+  line-height: .28em;
   text-transform: uppercase;
-  word-spacing: 19px;
+  word-spacing: 0.84em;
 }
 
 .cover__btn {
@@ -169,6 +171,7 @@
   font-size: 22px;
   text-transform: uppercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .lots {
@@ -176,7 +179,11 @@
   flex-direction: column;
   gap: 30px;
   padding: 0 24px;
-  padding-top: 175px;
+  padding-top: 177px;
+}
+
+.lots__card-link {
+  text-decoration: none;
 }
 
 .lots__heading {
@@ -185,6 +192,7 @@
 
 .lots__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   list-style: none;
 }
@@ -213,7 +221,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 334px;
+  max-width: 334px;
   height: 100%;
   padding: 51px 40px 48px;
   background-repeat: no-repeat;
@@ -227,15 +235,15 @@
   flex-direction: column;
 }
 
-.card-first {
+.card-tom-anderson {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.card-second {
+.card-book-agent {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.card-third {
+.card-kandinsky {
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -243,6 +251,7 @@
   display: inline-block;
   padding-left: 40px;
   font-size: 20px;
+  text-underline-position: unset;
 }
 
 .about {
@@ -252,19 +261,19 @@
   padding-top: 149px;
 }
 
-.about__col-1 {
-  padding-top: 34px;
+.about__col-logo {
+  padding-top: 33px;
 }
 
-.about__col-2 {
+.about__col-text-content {
   display: flex;
   flex-direction: column;
-  gap: 97px;
-  padding-top: 135px;
-  padding-left: 5px;
+  gap: 100px;
+  padding-top: 132px;
+  padding-left: 4px;
 }
 
-.about__logo-container {
+.about__logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -296,12 +305,13 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 183px 50px 88px;
+  padding: 182px 50px 88px;
 }
 
 .footer__contacts-list {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .footer__nav-list, .footer__social-list {
