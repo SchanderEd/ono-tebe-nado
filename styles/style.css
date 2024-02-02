@@ -111,48 +111,46 @@
 .cover__title {
   color: var(--light-text);
   font-size: 100px;
-  letter-spacing: .45em;
   text-transform: uppercase;
 }
 
 .span-accent {
   display: block;
   letter-spacing: 0.03em;
-}
-
-.letter-spacing-xl {
-  letter-spacing: .6em;
+  line-height: 120%;
 }
 
 .text-center {
-  padding-top: 10px;
-  letter-spacing: -.3em;
+  line-height: 132%;
   text-align: center;
 }
 
-.text-center__letter-spacing-sm {
-  letter-spacing: .31em;
-}
-
 .text-right {
-  padding-top: 3px;
-  letter-spacing: -.4em;
+  line-height: 113%;
   text-align: right;
 }
 
-.text-right__letter-spacing-xl {
-  letter-spacing: .29em;
+.letter-spacing-xl {
+  letter-spacing: 60px;
+}
+
+.letter-spacing-l {
+  letter-spacing: 30px;
 }
 
 .letter-spacing-sm {
-  letter-spacing: .01em;
+  letter-spacing: 0;
+}
+
+.title-spacing {
+  letter-spacing: -.24em;
 }
 
 .cover__bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 128px;
+  padding-top: 127px;
   padding-left: 28px;
 }
 
@@ -306,12 +304,6 @@
   display: flex;
   justify-content: space-between;
   padding: 180px 50px 88px;
-}
-
-.footer__contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 }
 
 .footer__nav-list, .footer__social-list {
