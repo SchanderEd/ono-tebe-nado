@@ -105,6 +105,9 @@
 
 .cover__content {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7.9em; 
   z-index: 1;
 }
 
@@ -150,7 +153,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 127px;
   padding-left: 28px;
 }
 
